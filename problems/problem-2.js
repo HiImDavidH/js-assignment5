@@ -49,6 +49,18 @@ const strings = [
 	'"firstName":"Mace","lastName":"Windu","age":53,"occupation":"Jedi","homePlanet":"Haruun Kal"'
 ]
 
-const jedi = strings // append your code here
+const jedi = strings.map(jedis => {
+	const [fn,ln,age1,occ,hp] = jedis.split(',')
+	//f1 = fn.split
+	firstName = fn.replace('"firstName":','').replace('"','').replace('"','')
+	lastName = ln.replace('"lastName":','').replace('"','').replace('"','')
+	const age = Number(age1.replace('"age":','').replace('"','').replace('"',''))  
+	occupation = occ.replace('"occupation":','').replace('"','').replace('"','')
+	homePlanet = hp.replace('"homePlanet":','').replace('"','').replace('"','').replace('"','')
+	return {
+		firstName,lastName,age,occupation,homePlanet
+	}
+}).filter(string => string.occupation == 'Jedi')
+
 
 test("Problem 2", jedi)

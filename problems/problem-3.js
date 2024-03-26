@@ -29,6 +29,19 @@ const isEven = number => number % 2 === 0 // returns true if the number is even
 
 const numbers = [ -10, -5, 0, 5, 10, 8, -2 ]
 
-const numberStrings = numbers // append your array methods here
+const numberStrings = numbers.sort((a,b) => a - b).filter(function(element){return element > 0})/*.reduce((prev, curr) => {
+	const rtnarr = []
+	for (let i = 0; i < numbers.length; i++){
+		if (isEven(numbers[i])) rtnarr.push(numbers[i] + 'is even')
+		else (rtnarr.push(numbers[i] + "is odd"))
+	}}, [])*/
 
+//
+
+
+//.filter(function(element){return element > 0}).toSorted((a,b) => a - b) 
+	
+	 // append your array methods here
+
+//const isvalid = x => x > 0
 test("Problem 3", numberStrings)

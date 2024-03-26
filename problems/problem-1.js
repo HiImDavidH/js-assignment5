@@ -29,6 +29,14 @@ const people = [
 	{ firstName: 'Marie', lastName: 'Curie', age: 66 }
 ]
 
-const peopleStrings = people // append your array methods here
+const peopleStrings = people.map(({firstName,lastName,age}) => ( "Name: " + firstName + " " + lastName + ", Age: " + age))
+
 
 test("Problem 1", peopleStrings)
+
+
+/*.reduce((prev, { firstName, lastName, age }) => {
+    
+	prev = 'Name: ' + firstName + ' ' + lastName + ', Age: ' + age 
+    return prev
+}, { })*/

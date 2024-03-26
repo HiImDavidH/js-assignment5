@@ -38,6 +38,23 @@ const items = [
 
 // Omit the 'age' element
 
-const person = items // append your code here
+const person = items.filter(e => e[0] != 'age').reduce((acc, [key, value]) => ({...acc, [key]: value}),
+{})
+/*
+.map(jedis => {
+	const obj = {}
+	for (let [key, value] of items){
+		obj[key] = value
+	}})
+	//f1 = fn.split
+	firstName = fn
+	lastName = ln
+	
+	occupation = occ
+	homePlanet = hp
+	return {
+		firstName,lastName,occupation,homePlanet,age
+	}
+}) */// append your code here
 
 test("Problem 4", person)
